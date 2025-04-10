@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+
+<div class="Div2">
+    <div class="opcion">Home</div>
+    <div class="opcion">idk</div>
+    <div class="opcion">uhm... yes</div>
+    <div class="opcion">I need some text</div>
+    <div class="opcion">:p</div>
+</div>
+
+<h2 style="text-align:center">Welcome</h2>
+<h4 style="text-align:center">This is my personal page :D</h4>
+<h4 style="text-align:center">(I don't know what more to say... so check out these images :p)</h4>
+<hr>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 7</div>
+    <img src="images/idonunerstan.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 7</div>
+    <img src="images/root.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 7</div>
+    <img src="images/html.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 7</div>
+    <img src="images/works.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 7</div>
+    <img src="images/before.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">6 / 7</div>
+    <img src="images/after.png" style="height:400px">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">7 / 7</div>
+    <img src="images/question.png" style="height:400px">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+<br>
+  <hr>
+
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+<p>This page feels very empty... so I'm going to fill it with some random things because f*ck you :)
+<br> don't know what to say :P
+<img class="floatleft" src="images/AleX.png" style="height:250px">
+<br>btw, I use arch btw
+<br> <br> Sometimes I'm weird, but other times even more.</p>
+<br> <br> Wait...
+<br> That's true, I'm not a real person, I'm just in ur mind...
+<br> <br> Or are you in <b>my</b> mind???
+<br> If I think about it... I don't know, I wasn't listening to you
+
+<br> Are you really still reading this?
+
+	<hr>
+<br>
+	<img src="images/lain0.jpg" style="height:300px">
+<hr>
+
+<div class="Div2">
+	<div class="vim"><a href=""><img src="images/vim.gif"></a></div>
+	<div class="vim"><a href="https://github.com/AleX-17r"><img src="images/github.png"></a></div>
+	<div class="vim"><a href="https://www.vim.org/"><img src="images/vim.gif"></a></div>
+</div>
+
+
+
+</body>
+</html>
+		
