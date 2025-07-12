@@ -1,0 +1,108 @@
+
+.header {
+    background-color: #aac8c6; /* Color de la cabecera */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio de separación */
+}
+
+.menu {
+    background-color: #3b3b3b; /* Color del menú */
+    
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.opcion {
+    padding: 10px 20px;
+    border: 1px solid #303030;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 1s ease, color 1s ease, box-shadow 1s ease;
+    color: rgb(255, 255, 255);
+}
+.opcion:hover {
+    border: 1px solid #aaa;
+
+    background-color: #e400cd;
+    color: #fdd488;
+    box-shadow: 0 0 10px rgb(40, 255, 105), /* brillo al rededor (cerca) */
+    0 0 50px rgb(40, 255, 105); /* brillo al rededor */
+    background-color: rgb(40, 255, 105); /* fondo */
+    color: rgb(54, 54, 54); /* texto */
+    cursor: pointer;
+}
+
+
+.container-Slides {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.zona-a {
+    background: linear-gradient(to bottom, #FF9800, #FF5722);     /* Ancho de Zona A */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centrar contenido */
+    height: 100%;
+    width: 100%;
+}
+
+.zona-b {
+    background-color: #d6d6d6; /* Color de Zona B */
+    background: linear-gradient(to bottom, rgb(149, 149, 149), #d6d6d6);    width: 50%; /* Ancho de Zona A */
+    height: 600px;
+    width: 50%; /* Ancho de Zona B */
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px; /* Bordes redondeados */
+    text-align: center; /* Centrar contenido */
+    overflow: scroll;
+}
+
+.preguntas{
+    background-color: #aac8c6; /* Color de la cabecera */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 10px; /* Espacio de separación */
+    cursor: pointer;
+
+}
+
+
+
+.footer {
+    background-color: #4CAF50; /* Color del pie de página */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+
+
+.girar-imagen {
+    transition: width 2s, height 2s, transform 2s;
+
+
+  }
+  
+.girar-imagen:hover {
+    transform: rotate(2deg);
+}
+
+
+
+/* Esta página ha sido creada por Alejandro Hurtado Fernández */
