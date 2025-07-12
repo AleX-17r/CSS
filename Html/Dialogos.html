@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Dialogos.css">
+    <title>Diálogo</title>
+</head>
+<body>
+    <div class="header"><h3>Cabecera</h3></div>
+    <div class="menu">
+        <div class="opcion">Inicio</div>
+        <div class="opcion">Servicios</div>
+        <div class="opcion">Portafolio</div>
+        <div class="opcion">Contacto</div>
+        <div class="opcion">Acerca de</div>
+    </div>
+
+    <div class="footer">Respuesta</div>
+    <div class="container">
+
+
+<!--DIALOGOS, cambia el DIV entero, imagen, preguntas y respuesta -->
+
+<!--Personaje :P -->
+<div class="container-Slides">
+    <div class="zona-a" id="zonaA">
+        Zona A <br>
+        <img src="images/gumball.jpg" width="500px" height="500px" id="imagenZonaA">
+    </div>
+
+    <div class="zona-b" id="zonaB">
+        Zona B <br>
+        <div class="preguntas" onclick="cambiarContenido(1)">
+            <p>skate</p>
+        </div>
+        <div class="preguntas" onclick="cambiarContenido(2)">
+            <p>wake-up</p>
+        </div>
+        <div class="preguntas" onclick="cambiarContenido(3)">
+            <p>flying</p>
+        </div>
+        <div class="preguntas" onclick="cambiarContenido(4)">
+            <p>fuck-you</p>
+        </div>
+        <div class="preguntas" onclick="cambiarContenido(5)">
+            <p>stranger-things</p>
+        </div>
+        <div class="preguntas" onclick="cambiarContenido(6)">
+            <p>lain</p>
+        </div>
+    </div>
+</div>
+<div class="footer" id="footer">Pie de página</div>
+        </div>
+    </div>
+</div>
+    <div class="footer">Pie de página</div>
+</div>
+
+<!--SCRIPT -->
+<script>
+// Datos para cambiar el contenido
+const contenido = [
+    {
+        imagen: "images/skate.jpg",
+        preguntas: ["skate", "wake-up", "flying"],
+        respuesta: "YES"
+    },
+    {
+        imagen: "images/wake-up.jpg",
+        preguntas: ["pregunta1", "pregunta2", "pregunta3"],
+        respuesta: "Respuesta para pregunta1"
+    },
+    {
+        imagen: "images/flying.jpg",
+        preguntas: ["pregunta4", "pregunta5", "pregunta6"],
+        respuesta: "Respuesta para pregunta4"
+    },
+    {
+        imagen: "images/fuck-you.jpg",
+        preguntas: ["pregunta7", "pregunta8", "pregunta9"],
+        respuesta: "Respuesta para pregunta7"
+    },
+    {
+        imagen: "images/stranger-things.jpg",
+        preguntas: ["pregunta10", "pregunta11", "pregunta12"],
+        respuesta: "Respuesta para pregunta10"
+    },
+    {
+        imagen: "images/lain.jpg",
+        preguntas: ["pregunta13", "pregunta14", "pregunta15"],
+        respuesta: "Respuesta para pregunta13"
+    }
+];
+
+function cambiarContenido(index) {
+    // Cambiar la imagen en zona-a
+    document.getElementById("imagenZonaA").src = contenido[index - 1].imagen;
+
+    // Cambiar las preguntas en zona-b
+    const zonaB = document.getElementById("zonaB");
+    zonaB.innerHTML = "Zona B <br>"; // Reiniciar el contenido
+    contenido[index - 1].preguntas.forEach(pregunta => {
+        const divPregunta = document.createElement("div");
+        divPregunta.className = "preguntas";
+        divPregunta.innerHTML = `<p>${pregunta}</p>`;
+        zonaB.appendChild(divPregunta);
+    });
+
+    // Cambiar el texto en el pie de página
+    document.getElementById("footer").innerText = contenido[index - 1].respuesta;
+}
+
+</script>
+
+
+</body>
+</html>
+
+<!-- Esta página ha sido creada por Alejandro Hurtado Fernández-->
+
